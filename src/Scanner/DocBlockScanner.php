@@ -200,7 +200,7 @@ class DocBlockScanner implements ScannerInterface
             }
             $currentChar = $stream[$streamIndex];
             $matches     = [];
-            $currentLine = (preg_match('#(.*?)\r?\n#', $stream, $matches, null, $streamIndex) === 1) ? $matches[1] : substr($stream, $streamIndex);
+            $currentLine = (preg_match('#(.*?)\r?\n#', $stream, $matches, 0, $streamIndex) === 1) ? $matches[1] : substr($stream, $streamIndex);
             if ($currentChar === ' ') {
                 $currentWord = (preg_match('#( +)#', $currentLine, $matches) === 1) ? $matches[1] : $currentLine;
             } else {
