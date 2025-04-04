@@ -14,7 +14,7 @@
     },
     "require": {
         "php": ">=7.3",
-        "zendframework/zend-eventmanager": "~2.5"
+        "acbjtechnology/zend-eventmanager-25": "@dev"
     },
     "require-dev": {
         "doctrine/common": ">=2.1",
@@ -36,5 +36,24 @@
         "psr-4": {
             "ZendTest\\Code\\": "test/"
         }
-    }
+    },
+    "repositories" : [
+        {
+            "type":"package",
+            "package": {
+                "name": "acbjtechnology/zend-eventmanager-25",
+                "version":"dev-main",
+                "source": {
+                    "url": "https://github.com/acbjtechnology/zend-eventmanager-25.git",
+                    "type": "git",
+                    "reference":"main"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Zend\\Stdlib\\": "src/"
+                    }
+                }
+            }
+        }
+    ]
 }
